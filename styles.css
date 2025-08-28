@@ -1,0 +1,275 @@
+/*----------------------------------------
+  Mega Dropdown Styling (Services)
+----------------------------------------*/
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    width: 900px;
+    /* Hidden by default */
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    /* Flex styling for a “mega” layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* Transition Effects */
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+    font-weight: bold;
+    
+}
+
+.show-dropdown {
+    display: flex !important; /* Force display */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.dropdown-column {
+    width: 0px; /* Fallback value */
+    min-width: 180px;
+    padding: 10px;
+}
+
+.dropdown-column h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #ff9800;
+    padding-bottom: 5px;
+}
+
+.dropdown-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-column ul li {
+    margin-bottom: 8px;
+}
+
+.dropdown-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    display: block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/*----------------------------------------
+  Industries Dropdown Styling
+----------------------------------------*/
+.dropdowns {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    width: 400px;
+    /* Hidden by default */
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    /* Grid layout for multiple columns */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* Transition Effects */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+.show-dropdowns {
+    display: grid !important;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.industries-dropdown-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.industries-dropdown-column ul li {
+    margin-bottom: 5px;
+}
+
+.industries-dropdown-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+}
+
+.industries-dropdown-column ul li a:hover {
+    color: #e74c3c;
+}
+
+/*----------------------------------------
+  Basic Navbar and Mobile Styles
+----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    padding-top: 70px; /* Offset for fixed navbar */
+}
+nav {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    
+    
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.menu > li {
+    position: relative;
+}
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+}
+.menu a:hover {
+    color: #ff9800;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+    .menu a {
+        padding: 15px;
+    }
+    .dropdown, .dropdowns {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 10px;
+        display: none;
+        opacity: 1;
+        transform: none;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/*===============================
+      Footer Styles
+===============================*/
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: #6a1b69;
+    color: white;
+    
+}
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 10px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+}
+.footer-column ul li a:hover {
+    color: #e74c3c;
+}
+.contact-section {
+    text-align: left;
+}
+.contact-section button {
+    background-color: white;
+    color: #6a1b69;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.contact-section p {
+    margin-top: 15px;
+}
